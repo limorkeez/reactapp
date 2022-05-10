@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import MainSection from './components/MainSection';
+import UserProfile from './components/ProfileCard/UserProfile';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gray-700">
+      <Navbar />
+      <MainSection />
+      <div className="py-8 px-8 grid gap-6 lg:max-w-[1280px] lg:mx-auto lg:grid-cols-3">
+        <UserProfile />
+        <UserProfile />
+        <UserProfile />
+      </div>
     </div>
   );
 }
